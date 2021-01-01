@@ -10,7 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\PrivateFileStorageService.Models\PFSS.Models.csproj" />
+    <ProjectReference Include="..\PFSS.Models\PFSS.Models.csproj" />
   </ItemGroup>
 
 </Project>

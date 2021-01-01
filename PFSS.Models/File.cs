@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace PrivateFileStorageService.Models
+namespace PFSS.Models
 {
     public class File : Shared
     {

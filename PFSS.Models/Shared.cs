@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace PrivateFileStorageService.Models
+namespace PFSS.Models
 {
     public class Shared
     {

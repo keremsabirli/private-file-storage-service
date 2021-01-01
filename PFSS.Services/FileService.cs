@@ -2,7 +2,6 @@
 using MongoDB.Driver;
 using MongoDB.Driver.GridFS;
 using PrivateFileStorageService;
-using PrivateFileStorageService.Models;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -11,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace PFSS.Services
 {
-    public class FileService : BaseService<PrivateFileStorageService.Models.File>
+    public class FileService : BaseService<PFSS.Models.File>
     {
         public GridFSBucket Bucket { get; set; }
         public FileService(IDatabaseSettings settings) : base(settings)
