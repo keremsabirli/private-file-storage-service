@@ -6,7 +6,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
 using Microsoft.OpenApi.Models;
+using PFSS.Services.Wrapper;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,7 +28,9 @@ namespace PrivateFileStorageService
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
+            services.Configure<DatabaseSettings>(Configuration.GetSection("DatabaseSettings"));
+            services.AddSingleton<IDatabaseSettings>(x => x.GetRequiredService<IOptions<DatabaseSettings>>().Value);
+            services.AddSingleton<ServiceWrapper>();
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {

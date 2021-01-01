@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrivateFileStorageService", "PrivateFileStorageService\PrivateFileStorageService.csproj", "{3F327C49-0DFE-48A5-9147-0FBECE9144C1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PFSS.API", "PrivateFileStorageService\PFSS.API.csproj", "{3F327C49-0DFE-48A5-9147-0FBECE9144C1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PFSS.Models", "PrivateFileStorageService.Models\PFSS.Models.csproj", "{74C377DB-FDCA-456E-915F-513001745779}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PFSS.Services", "PFSS.Services\PFSS.Services.csproj", "{611417DA-9F4B-489F-9209-63E100FC3E8A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{3F327C49-0DFE-48A5-9147-0FBECE9144C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3F327C49-0DFE-48A5-9147-0FBECE9144C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3F327C49-0DFE-48A5-9147-0FBECE9144C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74C377DB-FDCA-456E-915F-513001745779}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74C377DB-FDCA-456E-915F-513001745779}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74C377DB-FDCA-456E-915F-513001745779}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74C377DB-FDCA-456E-915F-513001745779}.Release|Any CPU.Build.0 = Release|Any CPU
+		{611417DA-9F4B-489F-9209-63E100FC3E8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{611417DA-9F4B-489F-9209-63E100FC3E8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{611417DA-9F4B-489F-9209-63E100FC3E8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{611417DA-9F4B-489F-9209-63E100FC3E8A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
