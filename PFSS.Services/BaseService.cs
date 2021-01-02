@@ -17,32 +17,32 @@ namespace PFSS.Services
             database = client.GetDatabase(settings.DatabaseName);
             collection = database.GetCollection<T>(typeof(T).Name);
         }
-        public T Add(T entity)
+        public virtual T Add(T entity)
         {
             collection.InsertOne(entity);
             return entity;
         }
-        public IList<T> Get()
+        public virtual IList<T> Get()
         {
             return collection.Find(x => true).ToList();
         }
-        public T Get(string id)
+        public virtual T Get(string id)
         {
             return collection.Find(x => x.Id == id).SingleOrDefault();
         }
-        public IList<T> Get(FilterDefinition<T> filter)
+        public virtual IList<T> Get(FilterDefinition<T> filter)
         {
             return collection.Find(filter).ToList();
         }
-        public void Update(T entity)
+        public virtual void Update(T entity)
         {
             collection.ReplaceOne(x => x.Id == entity.Id, entity);
         }
-        public void UpdateAndGet(T entity)
+        public virtual void UpdateAndGet(T entity)
         {
             collection.FindOneAndReplace(x => x.Id == entity.Id, entity);
         }
-        public void Delete(string id)
+        public virtual void Delete(string id)
         {
             collection.DeleteOne(sub => sub.Id == id);
         }

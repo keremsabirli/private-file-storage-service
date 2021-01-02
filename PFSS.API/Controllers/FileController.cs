@@ -23,6 +23,11 @@ namespace PrivateFileStorageService.Controllers
         {
             return Ok("Ok");
         }
+        [HttpGet]
+        public ActionResult Get(string id)
+        {
+            return Ok();
+        }
         [HttpPost]
         public ActionResult Upload(List<IFormFile> files)
         {

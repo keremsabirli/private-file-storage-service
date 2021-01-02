@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace PFSS.Services
 {
-    public class FileService : BaseService<PFSS.Models.File>
+    public class FileService : BaseService<Models.File>
     {
         public GridFSBucket Bucket { get; set; }
         public FileService(IDatabaseSettings settings) : base(settings)
@@ -23,10 +23,15 @@ namespace PFSS.Services
                 ReadPreference = ReadPreference.Secondary
             });
         }
+        public override Models.File Get(string id)
+        {
+            return base.Get(id);
+        }
         public async Task<ObjectId> Upload(Stream fileStream)
         {
             var id = await Bucket.UploadFromStreamAsync("test", fileStream);
             return id;
         }
+        
     }
 }
