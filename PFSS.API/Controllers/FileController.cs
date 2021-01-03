@@ -23,7 +23,7 @@ namespace PrivateFileStorageService.Controllers
         {
             return Ok("Ok");
         }
-        [HttpGet]
+        [HttpGet("{id}")]
         public ActionResult Get(string id)
         {
             return Ok();
